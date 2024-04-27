@@ -144,10 +144,9 @@ body .fonctionnement button {
 }
 body .fonctionnement button .ordre {
   display: flex;
-  position: absolute;
   justify-content: center;
   align-items: center;
-  left: 15px;
+  margin-left: -15px;
   width: 24px;
   height: 24px;
   background-color: #9356DC;
@@ -191,19 +190,29 @@ body .restaurants .restaurants__cards {
   gap: 18px;
 }
 body .restaurants .restaurants__cards a {
+  display: flex;
   height: 251px;
   width: 100%;
   text-decoration: none;
 }
 body .restaurants .restaurants__cards a .card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   position: relative;
   height: 100%;
   width: 100%;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
-body .restaurants .restaurants__cards a .card img {
+body .restaurants .restaurants__cards a .card__image-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+body .restaurants .restaurants__cards a .card__image-container img {
   position: absolute;
+  display: flex;
   height: 174px;
   width: 100%;
   -o-object-fit: cover;
@@ -211,15 +220,13 @@ body .restaurants .restaurants__cards a .card img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-body .restaurants .restaurants__cards a .card__nouveau {
+body .restaurants .restaurants__cards a .card__image-container__nouveau {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  left: 72.5%;
-  top: 5.9%;
-  width: 23.47%;
-  height: 11.56%;
+  width: 25.14%;
+  height: 16.67%;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -229,15 +236,15 @@ body .restaurants .restaurants__cards a .card__nouveau {
   border-radius: 2px;
   color: #008766;
   z-index: 1;
+  margin: 13px 12px 0px 0px;
 }
 body .restaurants .restaurants__cards a .card__card-content {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  bottom: 2%;
   width: 100%;
   color: #000000;
   justify-content: space-between;
+  align-items: center;
 }
 body .restaurants .restaurants__cards a .card__card-content .card-content__card-txt {
   display: flex;
@@ -260,17 +267,34 @@ body .restaurants .restaurants__cards a .card__card-content .card-content__card-
 }
 body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite {
   display: flex;
-  align-items: center;
   width: 22px;
   height: 21px;
+  margin: 23px 25px 33px 0px;
+}
+body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite input {
   position: absolute;
-  bottom: 50%;
-  right: 10%;
+  opacity: 0;
+  cursor: pointer;
+  height: 21px;
+  width: 22px;
+  z-index: 2;
 }
 body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite img {
+  position: absolute;
+  cursor: pointer;
   width: 22px;
   height: 21px;
   border-radius: 0px;
+  z-index: 2;
+}
+body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite .like-active {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  transition: opacity 250ms;
+}
+body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite input:checked + img {
+  opacity: 0;
 }
 body footer {
   display: flex;
