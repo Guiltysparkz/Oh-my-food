@@ -23,9 +23,18 @@ header {
         font-size: 30px;
         margin-top: 14px;
         margin-bottom: 6px;
+        @media (min-width: 1280px) {
+            display: none;
+        }
     }
     img {
         display: none;
+        @media (min-width: 1280px) {
+            display: flex;
+            width: 200px;
+            height: 34.2px;
+            margin: 30px 0px 30px 0px;
+        }
     }
     .location {
         display: flex;
@@ -67,6 +76,12 @@ body {
             margin-bottom: 0px;
             margin-top: 0px;
             width: 74%;
+            @media (min-width: 768px) {
+                font-size: 32px;
+            }
+            @media (min-width: 1280px) {
+                font-size: 40px;
+            }
         }
         p {
             font-weight: 300;
@@ -96,6 +111,7 @@ body {
             width: 66%;
             margin-bottom: 57px;
             z-index: 1;
+            max-width: 218px;
             &:hover {
                 &::after {
                     opacity: 1;
@@ -110,7 +126,6 @@ body {
                 bottom: 0;
                 left: 0;
                 border-radius: 25px;
-                // background: linear-gradient(193.33deg, lighten($main-color, 5) -11.44%, lighten($secondary-color, 5) 123.93%);
                 background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, $main-color -5.2%, $secondary-color 110.74%);
                 opacity: 0;
                 z-index: -1;
@@ -121,12 +136,23 @@ body {
     .fonctionnement {
         display: flex;
         flex-direction: column;
+        @media (min-width: 1280px) {
+            margin-left: 180px;
+        }
         h2 {
             font-weight: 700;
             font-size: 24px;
             line-height: 28px;
             padding: 48px 0px 26px 20px;
             margin: 0px 0px 0px 0px;
+            @media (min-width: 768px) {
+                padding-left: 0px;
+                margin-left: 4%;
+            }
+            @media (min-width: 1280px) {
+                padding-left: 0px;
+                margin-left: 4%;
+            }
         }
         .fonctionnement__buttons {
             display: flex;
@@ -134,6 +160,15 @@ body {
             align-items: center;
             gap: 25px;
             padding-bottom: 68px;
+            @media (min-width: 768px) {
+                flex-direction: row;
+                margin-left: 4%;
+                margin-right: 4%;          
+            }
+            @media (min-width: 1280px) {
+                margin-left: 0px;
+                margin-right: 207px;
+            }
         }
         button {
             display: flex;
@@ -148,13 +183,16 @@ body {
             width: 86%;
             height: 72.38px;
             border: 0px;
+            @media (min-width: 768px) {
+                width: 31.81%;
+            }
             .ordre {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-left: -15px;
-                width: 24px;
-                height: 24px;
+                min-width: 24px;
+                min-height: 24px;
                 background-color: $main-color;
                 color: white;
                 font-weight: 500;
@@ -189,17 +227,50 @@ body {
             padding-top: 54px;
             padding-left: 20px;
             padding-bottom: 26px;
+            @media (min-width: 768px) {
+                padding-left: 4.5%;
+            }
+            @media (min-width: 1280px) {
+                margin-left: 180px;
+                padding-left: 0px;
+            }
         }
         .restaurants__cards {
             display: flex;
             flex-direction: column;
             padding: 0px 17px 66px 17px;
             gap: 18px;
+            @media (min-width: 768px) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                height: 526px;
+                row-gap: 2%;
+                column-gap: 2%;
+                padding: 0px 4.5% 66px 4.5%;      
+            }
+            @media (min-width: 1280px) {
+                margin-left: 180px;
+                margin-right: 207px;
+                height: 555px;
+                gap: 50px;
+            }
+            @media (min-width: 1280px) {
+                margin-left: 180px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
             a {
                 display: flex;
                 height: 251px;
                 width: 100%;
                 text-decoration: none;
+                @media (min-width: 768px) {
+                    max-width: 49%;
+                }
+                @media (min-width: 1280px) {
+                    max-width: 47%;
+                }
                 .card {
                     display: flex;
                     flex-direction: column;
@@ -239,6 +310,10 @@ body {
                             color: #008766;
                             z-index: 1;
                             margin: 13px 12px 0px 0px;
+                            @media (min-width: 1280px) {
+                                max-width: 16.32%;
+                                min-height: 11.55%;
+                            }
                         }
                     }
                     &__card-content {
@@ -272,30 +347,22 @@ body {
                             width: 22px;
                             height: 21px;
                             margin: 23px 25px 33px 0px;
-                            input {
-                                position: absolute;
-                                opacity: 0;
-                                cursor: pointer;
-                                height: 21px;
-                                width: 22px;
-                                z-index: 2;
-                            }
                             img {
                                 position: absolute;
-                                cursor: pointer;
                                 width: 22px;
                                 height: 21px;
                                 border-radius: 0px;
-                                z-index: 2;
+                                z-index: 1;
                             }
                             .like-active {
                                 position: absolute;
-                                cursor: pointer;
-                                z-index: 1;
+                                z-index: 2;
                                 transition: opacity 250ms;
-                            }
-                            input:checked + img {
                                 opacity: 0;
+                            }
+                            .like-active:hover {
+                                z-index: 1;
+                                opacity: 1;
                             }
                         }
                     }
@@ -303,38 +370,65 @@ body {
             }
         }
     }
-    footer {
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    background: #353535;
+    height: 186px;
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        height: 114px;
+    }
+    h2 {
+        font-family: $title-font-family;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        padding: 22px 0px 19px 25px;
+        color: white;
+        @media (min-width: 768px) {
+            padding: 0px 4.51% 0px 6.1%;
+            align-content: center;
+        }
+        @media (min-width: 1280px) {
+            padding: 0px 4.7% 0px 6.3%;
+        }
+    }
+    .footer__links {
         display: flex;
         flex-direction: column;
-        background: #353535;        
-        h2 {
-            font-family: $title-font-family;
-            font-style: italic;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 26px;
-            padding: 22px 0px 19px 25px;
-            color: white;
+        align-items: flex-start;
+        padding: 0px 0px 22px 25px;
+        gap: 7px;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            padding: 0px 0px 0px 25px;
+            width: 100%;
+            justify-content: flex-end;
         }
-        .footer__links {
+        a {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 0px 0px 22px 25px;
-            gap: 7px;
-            a {
-                display: flex;
-                flex-direction: row;
-                color: white;
-                gap: 10px;
-                p {
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 19px;
-                }
-                .p--thin {
-                    font-weight: 400;
-                }
+            flex-direction: row;
+            color: white;
+            gap: 10px;
+            p {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+            }
+            .p--thin {
+                font-weight: 400;
+            }
+        }
+        .a--padding-left {
+            @media (min-width: 768px) {
+                padding-left: 3%;
+            }
+            @media (min-width: 1280px) {
+                padding-left: 3.2%;
             }
         }
     }

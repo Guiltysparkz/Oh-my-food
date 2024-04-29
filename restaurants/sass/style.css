@@ -1,0 +1,76 @@
+* {
+  font-family: "Roboto";
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0px 0px 0px 0px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 17px 0px 16px 17px;
+}
+header a img {
+  display: flex;
+}
+header h1 {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  padding-left: 59px;
+}
+header img {
+  display: none;
+}
+
+body {
+  margin: 0px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: #353535;
+}
+footer h2 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 22px 0px 19px 25px;
+  color: white;
+}
+footer .footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 22px 25px;
+  gap: 7px;
+}
+footer .footer__links a {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 10px;
+}
+footer .footer__links a p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+footer .footer__links a .p--thin {
+  font-weight: 400;
+}/*# sourceMappingURL=style.css.map */
