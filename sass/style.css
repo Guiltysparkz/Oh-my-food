@@ -60,6 +60,56 @@ header .location p {
 body {
   margin: 0px;
 }
+body .loading {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin-top: -30%;
+  padding-top: 50%;
+  z-index: 2;
+  background-color: white;
+  animation-name: loading;
+  animation-duration: 250ms;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body .loading h1 {
+  font-family: "Shrikhand";
+  font-size: 40px;
+  height: -moz-fit-content;
+  height: fit-content;
+  animation-name: titleAnim;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@media (min-width: 1280px) {
+  body .loading h1 {
+    font-size: 60px;
+  }
+}
+@keyframes titleAnim {
+  0% {
+    color: #9356DC;
+  }
+  50% {
+    color: #FF79DA;
+  }
+  100% {
+    color: #9356DC;
+  }
+}
 body .reservation {
   display: flex;
   flex-direction: column;
@@ -117,6 +167,11 @@ body .reservation button {
   z-index: 1;
   max-width: 218px;
 }
+@media (min-width: 768px) {
+  body .reservation button {
+    margin-bottom: 30px;
+  }
+}
 body .reservation button:hover::after {
   opacity: 1;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
@@ -138,9 +193,19 @@ body .fonctionnement {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  body .fonctionnement {
+    padding-left: 2%;
+  }
+}
 @media (min-width: 1280px) {
   body .fonctionnement {
-    margin-left: 180px;
+    padding: 0px 13.828125% 0px 13.828125%;
+  }
+}
+@media (min-width: 1440px) {
+  body .fonctionnement {
+    padding: 0px 12.5% 0px 12.5%;
   }
 }
 body .fonctionnement h2 {
@@ -159,7 +224,7 @@ body .fonctionnement h2 {
 @media (min-width: 1280px) {
   body .fonctionnement h2 {
     padding-left: 0px;
-    margin-left: 4%;
+    margin-left: 0px;
   }
 }
 body .fonctionnement .fonctionnement__buttons {
@@ -174,12 +239,13 @@ body .fonctionnement .fonctionnement__buttons {
     flex-direction: row;
     margin-left: 4%;
     margin-right: 4%;
+    padding-bottom: 50px;
   }
 }
 @media (min-width: 1280px) {
   body .fonctionnement .fonctionnement__buttons {
     margin-left: 0px;
-    margin-right: 207px;
+    margin-right: 0px;
   }
 }
 body .fonctionnement button {
@@ -195,6 +261,7 @@ body .fonctionnement button {
   width: 86%;
   height: 72.38px;
   border: 0px;
+  max-width: 335px;
 }
 @media (min-width: 768px) {
   body .fonctionnement button {
@@ -234,6 +301,21 @@ body .restaurants {
   flex-direction: column;
   background-color: #F6F6F6;
 }
+@media (min-width: 768px) {
+  body .restaurants {
+    padding: 0px 2% 0px 2%;
+  }
+}
+@media (min-width: 1280px) {
+  body .restaurants {
+    padding: 0px 13.828125% 0px 13.828125%;
+  }
+}
+@media (min-width: 1440px) {
+  body .restaurants {
+    padding: 0px 12.5% 0px 12.5%;
+  }
+}
 body .restaurants h2 {
   font-weight: 700;
   font-size: 24px;
@@ -245,11 +327,11 @@ body .restaurants h2 {
 @media (min-width: 768px) {
   body .restaurants h2 {
     padding-left: 4.5%;
+    padding-top: 30px;
   }
 }
 @media (min-width: 1280px) {
   body .restaurants h2 {
-    margin-left: 180px;
     padding-left: 0px;
   }
 }
@@ -268,22 +350,24 @@ body .restaurants .restaurants__cards {
     row-gap: 2%;
     -moz-column-gap: 2%;
          column-gap: 2%;
-    padding: 0px 4.5% 66px 4.5%;
+    padding: 0px 4.5% 30px 4.5%;
   }
 }
 @media (min-width: 1280px) {
   body .restaurants .restaurants__cards {
-    margin-left: 180px;
-    margin-right: 207px;
     height: 555px;
-    gap: 50px;
+    gap: 3.47222%;
+    justify-content: start;
+    margin: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   body .restaurants .restaurants__cards {
-    margin-left: 180px;
-    padding-left: 0px;
-    padding-right: 0px;
+    row-gap: 50px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
   }
 }
 body .restaurants .restaurants__cards a {
@@ -300,6 +384,11 @@ body .restaurants .restaurants__cards a {
 @media (min-width: 1280px) {
   body .restaurants .restaurants__cards a {
     max-width: 47%;
+  }
+}
+@media (min-width: 1440px) {
+  body .restaurants .restaurants__cards a {
+    max-width: 490px;
   }
 }
 body .restaurants .restaurants__cards a .card {
@@ -426,12 +515,13 @@ footer h2 {
 @media (min-width: 768px) {
   footer h2 {
     padding: 0px 4.51% 0px 6.1%;
-    align-content: center;
+    align-content: end;
+    padding-bottom: 30px;
   }
 }
 @media (min-width: 1280px) {
   footer h2 {
-    padding: 0px 4.7% 0px 6.3%;
+    padding: 0px 4.7% 30px 6.3%;
   }
 }
 footer .footer__links {
@@ -444,8 +534,8 @@ footer .footer__links {
 @media (min-width: 768px) {
   footer .footer__links {
     flex-direction: row;
-    align-items: center;
-    padding: 0px 0px 0px 25px;
+    align-items: end;
+    padding: 0px 0px 30px 25px;
     width: 100%;
     justify-content: flex-end;
   }
