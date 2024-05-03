@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "ohmyfood project",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass:./assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guiltysparkz/Oh-my-food.git"
+  },
+  "author": "Coldwell Charles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guiltysparkz/Oh-my-food/issues"
+  },
+  "homepage": "https://github.com/Guiltysparkz/Oh-my-food#readme",
+  "dependencies": {
+    "sass": "^1.76.0"
+  }
+}
