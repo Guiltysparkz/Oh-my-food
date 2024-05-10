@@ -7,11 +7,23 @@ h1, h2, h3, h4, p {
   margin: 0px 0px 0px 0px;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+body {
+  margin: 0px;
+}
+
 header {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1280px) {
+  header .title-hide {
+    display: none;
+  }
 }
 header h1 {
   font-family: "Shrikhand";
@@ -19,16 +31,11 @@ header h1 {
   margin-top: 14px;
   margin-bottom: 6px;
 }
-@media (min-width: 1280px) {
-  header h1 {
-    display: none;
-  }
-}
-header img {
+header .index_desktop_img {
   display: none;
 }
 @media (min-width: 1280px) {
-  header img {
+  header .index_desktop_img {
     display: flex;
     width: 200px;
     height: 34.2px;
@@ -57,10 +64,7 @@ header .location p {
   padding-top: 15.5px;
 }
 
-body {
-  margin: 0px;
-}
-body .loading {
+.loading {
   display: flex;
   justify-content: center;
   position: absolute;
@@ -89,7 +93,7 @@ body .loading {
     transform: translateY(-10000px);
   }
 }
-body .loading h1 {
+.loading h1 {
   font-family: "Shrikhand";
   font-size: 40px;
   height: fit-content;
@@ -99,7 +103,7 @@ body .loading h1 {
   animation-fill-mode: both;
 }
 @media (min-width: 1280px) {
-  body .loading h1 {
+  .loading h1 {
     font-size: 60px;
   }
 }
@@ -114,14 +118,15 @@ body .loading h1 {
     color: #9356DC;
   }
 }
-body .reservation {
+
+.reservation {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #F6F6F6;
 }
-body .reservation h2 {
+.reservation h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -132,16 +137,16 @@ body .reservation h2 {
   width: 74%;
 }
 @media (min-width: 768px) {
-  body .reservation h2 {
+  .reservation h2 {
     font-size: 32px;
   }
 }
 @media (min-width: 1280px) {
-  body .reservation h2 {
+  .reservation h2 {
     font-size: 40px;
   }
 }
-body .reservation p {
+.reservation p {
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
@@ -151,7 +156,7 @@ body .reservation p {
   margin-bottom: 0px;
   text-align: center;
 }
-body .reservation button {
+.reservation button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,15 +177,15 @@ body .reservation button {
   max-width: 218px;
 }
 @media (min-width: 768px) {
-  body .reservation button {
+  .reservation button {
     margin-bottom: 30px;
   }
 }
-body .reservation button:hover::after {
+.reservation button:hover::after {
   opacity: 1;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
-body .reservation button::after {
+.reservation button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -193,26 +198,27 @@ body .reservation button::after {
   z-index: -1;
   transition: opacity 250ms;
 }
-body .fonctionnement {
+
+.fonctionnement {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  body .fonctionnement {
+  .fonctionnement {
     padding-left: 2%;
   }
 }
 @media (min-width: 1280px) {
-  body .fonctionnement {
+  .fonctionnement {
     padding: 0px 13.828125% 0px 13.828125%;
   }
 }
 @media (min-width: 1440px) {
-  body .fonctionnement {
+  .fonctionnement {
     padding: 0px 12.5% 0px 12.5%;
   }
 }
-body .fonctionnement h2 {
+.fonctionnement h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -220,18 +226,18 @@ body .fonctionnement h2 {
   margin: 0px 0px 0px 0px;
 }
 @media (min-width: 768px) {
-  body .fonctionnement h2 {
+  .fonctionnement h2 {
     padding-left: 0px;
     margin-left: 4%;
   }
 }
 @media (min-width: 1280px) {
-  body .fonctionnement h2 {
+  .fonctionnement h2 {
     padding-left: 0px;
     margin-left: 0px;
   }
 }
-body .fonctionnement .fonctionnement__buttons {
+.fonctionnement .fonctionnement__buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,7 +245,7 @@ body .fonctionnement .fonctionnement__buttons {
   padding-bottom: 68px;
 }
 @media (min-width: 768px) {
-  body .fonctionnement .fonctionnement__buttons {
+  .fonctionnement .fonctionnement__buttons {
     flex-direction: row;
     margin-left: 4%;
     margin-right: 4%;
@@ -247,12 +253,12 @@ body .fonctionnement .fonctionnement__buttons {
   }
 }
 @media (min-width: 1280px) {
-  body .fonctionnement .fonctionnement__buttons {
+  .fonctionnement .fonctionnement__buttons {
     margin-left: 0px;
     margin-right: 0px;
   }
 }
-body .fonctionnement button {
+.fonctionnement button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -268,11 +274,11 @@ body .fonctionnement button {
   max-width: 335px;
 }
 @media (min-width: 768px) {
-  body .fonctionnement button {
+  .fonctionnement button {
     width: 31.81%;
   }
 }
-body .fonctionnement button .ordre {
+.fonctionnement button .ordre {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,41 +292,42 @@ body .fonctionnement button .ordre {
   line-height: 17px;
   border-radius: 100%;
 }
-body .fonctionnement button i {
+.fonctionnement button i {
   color: grey;
   padding-left: 28px;
 }
-body .fonctionnement button .i--purple {
+.fonctionnement button .i--purple {
   color: #9356DC;
 }
-body .fonctionnement button h3 {
+.fonctionnement button h3 {
   text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   padding-left: 27px;
 }
-body .restaurants {
+
+.restaurants {
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
 }
 @media (min-width: 768px) {
-  body .restaurants {
+  .restaurants {
     padding: 0px 2% 0px 2%;
   }
 }
 @media (min-width: 1280px) {
-  body .restaurants {
+  .restaurants {
     padding: 0px 13.828125% 0px 13.828125%;
   }
 }
 @media (min-width: 1440px) {
-  body .restaurants {
+  .restaurants {
     padding: 0px 12.5% 0px 12.5%;
   }
 }
-body .restaurants h2 {
+.restaurants h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -329,24 +336,24 @@ body .restaurants h2 {
   padding-bottom: 26px;
 }
 @media (min-width: 768px) {
-  body .restaurants h2 {
+  .restaurants h2 {
     padding-left: 4.5%;
     padding-top: 30px;
   }
 }
 @media (min-width: 1280px) {
-  body .restaurants h2 {
+  .restaurants h2 {
     padding-left: 0px;
   }
 }
-body .restaurants .restaurants__cards {
+.restaurants .restaurants__cards {
   display: flex;
   flex-direction: column;
   padding: 0px 17px 66px 17px;
   gap: 18px;
 }
 @media (min-width: 768px) {
-  body .restaurants .restaurants__cards {
+  .restaurants .restaurants__cards {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -357,7 +364,7 @@ body .restaurants .restaurants__cards {
   }
 }
 @media (min-width: 1280px) {
-  body .restaurants .restaurants__cards {
+  .restaurants .restaurants__cards {
     height: 555px;
     gap: 3.47222%;
     justify-content: start;
@@ -367,33 +374,33 @@ body .restaurants .restaurants__cards {
   }
 }
 @media (min-width: 1440px) {
-  body .restaurants .restaurants__cards {
+  .restaurants .restaurants__cards {
     row-gap: 50px;
     column-gap: 100px;
   }
 }
-body .restaurants .restaurants__cards a {
+.restaurants .restaurants__cards a {
   display: flex;
   height: 251px;
   width: 100%;
   text-decoration: none;
 }
 @media (min-width: 768px) {
-  body .restaurants .restaurants__cards a {
+  .restaurants .restaurants__cards a {
     max-width: 49%;
   }
 }
 @media (min-width: 1280px) {
-  body .restaurants .restaurants__cards a {
+  .restaurants .restaurants__cards a {
     max-width: 47%;
   }
 }
 @media (min-width: 1440px) {
-  body .restaurants .restaurants__cards a {
+  .restaurants .restaurants__cards a {
     max-width: 490px;
   }
 }
-body .restaurants .restaurants__cards a .card {
+.restaurants .restaurants__cards a .card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -403,12 +410,12 @@ body .restaurants .restaurants__cards a .card {
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
-body .restaurants .restaurants__cards a .card__image-container {
+.restaurants .restaurants__cards a .card__image-container {
   display: flex;
   justify-content: flex-end;
   height: 100%;
 }
-body .restaurants .restaurants__cards a .card__image-container img {
+.restaurants .restaurants__cards a .card__image-container img {
   position: absolute;
   z-index: 2;
   display: flex;
@@ -418,7 +425,7 @@ body .restaurants .restaurants__cards a .card__image-container img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-body .restaurants .restaurants__cards a .card__image-container__nouveau {
+.restaurants .restaurants__cards a .card__image-container__nouveau {
   display: flex;
   position: relative;
   justify-content: center;
@@ -433,16 +440,16 @@ body .restaurants .restaurants__cards a .card__image-container__nouveau {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   color: #008766;
-  z-index: 1;
+  z-index: 2;
   margin: 13px 12px 0px 0px;
 }
 @media (min-width: 1280px) {
-  body .restaurants .restaurants__cards a .card__image-container__nouveau {
+  .restaurants .restaurants__cards a .card__image-container__nouveau {
     max-width: 16.32%;
     min-height: 11.55%;
   }
 }
-body .restaurants .restaurants__cards a .card__card-content {
+.restaurants .restaurants__cards a .card__card-content {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -450,45 +457,45 @@ body .restaurants .restaurants__cards a .card__card-content {
   justify-content: space-between;
   align-items: center;
 }
-body .restaurants .restaurants__cards a .card__card-content .card-content__card-txt {
+.restaurants .restaurants__cards a .card__card-content .card-content__card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-body .restaurants .restaurants__cards a .card__card-content .card-content__card-txt .card-txt__card-title {
+.restaurants .restaurants__cards a .card__card-content .card-content__card-txt .card-txt__card-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
   padding-top: 12px;
   padding-left: 13px;
 }
-body .restaurants .restaurants__cards a .card__card-content .card-content__card-txt .card-txt__card-subtitle {
+.restaurants .restaurants__cards a .card__card-content .card-content__card-txt .card-txt__card-subtitle {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
   padding-bottom: 12px;
   padding-left: 13px;
 }
-body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite {
+.restaurants .restaurants__cards a .card__card-content .card-content__card-favorite {
   display: flex;
   width: 22px;
   height: 21px;
   margin: 23px 25px 33px 0px;
 }
-body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite img {
+.restaurants .restaurants__cards a .card__card-content .card-content__card-favorite img {
   position: absolute;
   width: 22px;
   height: 21px;
   border-radius: 0px;
   z-index: 1;
 }
-body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite .like-active {
+.restaurants .restaurants__cards a .card__card-content .card-content__card-favorite .like-active {
   position: absolute;
   z-index: 2;
   transition: opacity 250ms;
   opacity: 0;
 }
-body .restaurants .restaurants__cards a .card__card-content .card-content__card-favorite .like-active:hover {
+.restaurants .restaurants__cards a .card__card-content .card-content__card-favorite .like-active:hover {
   z-index: 1;
   opacity: 1;
 }
@@ -567,22 +574,7 @@ footer .footer__links a .p--thin {
   }
 }
 
-* {
-  font-family: "Roboto";
-  text-decoration: none;
-}
-
-h1, h2, h3, h4, p {
-  margin: 0px 0px 0px 0px;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-header a {
+.return {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -592,25 +584,25 @@ header a {
   height: 30px;
   margin: 17px 0px 16px 17px;
 }
-header a img {
+.return img {
   display: flex;
   width: 17.2px;
   height: 16px;
 }
-header h1 {
+
+.header-title {
   font-family: "Shrikhand";
   font-size: 30px;
   margin-top: 14px;
   margin-bottom: 6px;
 }
-header img {
-  display: none;
+@media (min-width: 1280px) {
+  .header-title {
+    display: none;
+  }
 }
 
-body {
-  margin: 0px;
-}
-body .image-restaurant {
+.image-restaurant {
   position: relative;
   width: 100%;
   min-height: 275px;
@@ -618,7 +610,8 @@ body .image-restaurant {
   max-height: 383px;
   object-fit: cover;
 }
-body .menu {
+
+.menu {
   display: flex;
   flex-direction: column;
   background: #F7F7F7;
@@ -628,56 +621,56 @@ body .menu {
   padding-left: 13px;
 }
 @media (min-width: 768px) {
-  body .menu {
+  .menu {
     margin-right: 13.487%;
     margin-left: 13.487%;
   }
 }
 @media (min-width: 1280px) {
-  body .menu {
+  .menu {
     padding-right: 14.3%;
     padding-left: 14.3%;
   }
 }
-body .menu .menu__title {
+.menu .menu__title {
   display: flex;
   flex-direction: row;
   padding: 32px 17px 40px 17px;
   align-items: center;
   justify-content: center;
 }
-body .menu .menu__title h2 {
+.menu .menu__title h2 {
   font-family: "Shrikhand";
   font-weight: 400;
   font-size: 28px;
   line-height: 41px;
 }
-body .menu .menu__title .favorite {
+.menu .menu__title .favorite {
   display: flex;
   width: 22px;
   height: 21px;
   padding-left: 32px;
 }
-body .menu .menu__title .favorite img {
+.menu .menu__title .favorite img {
   position: absolute;
   width: 22px;
   height: 21px;
   border-radius: 0px;
   z-index: 1;
 }
-body .menu .menu__title .favorite .like-active {
+.menu .menu__title .favorite .like-active {
   position: absolute;
   z-index: 2;
   transition: opacity 250ms;
   opacity: 0;
   height: 21px;
 }
-body .menu .menu__title .favorite .like-active:hover {
+.menu .menu__title .favorite .like-active:hover {
   z-index: 1;
   opacity: 1;
   height: 21px;
 }
-body .menu .anim-entrees {
+.menu .anim-entrees {
   animation-name: fadeIn;
   animation-duration: 2s;
 }
@@ -689,7 +682,7 @@ body .menu .anim-entrees {
     opacity: 1;
   }
 }
-body .menu .anim-plats {
+.menu .anim-plats {
   animation-name: fadeIn;
   animation-duration: 3s;
 }
@@ -704,7 +697,7 @@ body .menu .anim-plats {
     opacity: 1;
   }
 }
-body .menu .anim-desserts {
+.menu .anim-desserts {
   animation-name: fadeIn;
   animation-duration: 4s;
 }
@@ -719,13 +712,13 @@ body .menu .anim-desserts {
     opacity: 1;
   }
 }
-body .menu .menu-content {
+.menu .menu-content {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding-bottom: 40px;
 }
-body .menu .menu-content h3 {
+.menu .menu-content h3 {
   position: relative;
   font-weight: 300;
   font-size: 16px;
@@ -734,19 +727,19 @@ body .menu .menu-content h3 {
   width: fit-content;
   height: 27px;
 }
-body .menu .menu-content h3::before {
+.menu .menu-content h3::before {
   content: "";
   position: absolute;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   bottom: 0%;
 }
-body .menu .menu-content__buttons {
+.menu .menu-content__buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-body .menu .menu-content__buttons button {
+.menu .menu-content__buttons button {
   display: flex;
   flex-direction: row;
   min-width: 349px;
@@ -761,7 +754,7 @@ body .menu .menu-content__buttons button {
   position: relative;
   overflow: hidden;
 }
-body .menu .menu-content__buttons button .buttons-text {
+.menu .menu-content__buttons button .buttons-text {
   display: flex;
   flex-direction: column;
   padding-left: 15px;
@@ -773,7 +766,7 @@ body .menu .menu-content__buttons button .buttons-text {
   white-space: nowrap;
   flex-basis: 100%;
 }
-body .menu .menu-content__buttons button .buttons-text h4 {
+.menu .menu-content__buttons button .buttons-text h4 {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
@@ -781,7 +774,7 @@ body .menu .menu-content__buttons button .buttons-text h4 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-body .menu .menu-content__buttons button .buttons-text p {
+.menu .menu-content__buttons button .buttons-text p {
   font-weight: 300;
   font-size: 15.0431px;
   line-height: 18px;
@@ -790,21 +783,21 @@ body .menu .menu-content__buttons button .buttons-text p {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-body .menu .menu-content__buttons button .buttons-price {
+.menu .menu-content__buttons button .buttons-price {
   position: relative;
   padding-right: 13.5px;
   padding-bottom: 13.5px;
   transform: translateX(0%);
   transition: 0.3s ease-out;
 }
-body .menu .menu-content__buttons button .buttons-price p {
+.menu .menu-content__buttons button .buttons-price p {
   display: flex;
   flex-direction: row;
   font-weight: 700;
   font-size: 15.0431px;
   line-height: 18px;
 }
-body .menu .menu-content__buttons button .buttons-checkmark {
+.menu .menu-content__buttons button .buttons-checkmark {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -817,23 +810,23 @@ body .menu .menu-content__buttons button .buttons-checkmark {
   transition: 0.3s ease-out;
   right: 0%;
 }
-body .menu .menu-content__buttons button .buttons-checkmark img {
+.menu .menu-content__buttons button .buttons-checkmark img {
   height: 20px;
   width: 20px;
 }
-body .menu .menu-content__buttons button:hover > .buttons-checkmark {
+.menu .menu-content__buttons button:hover > .buttons-checkmark {
   transform: translateX(0%);
 }
-body .menu .menu-content__buttons button:hover > .buttons-price {
+.menu .menu-content__buttons button:hover > .buttons-price {
   transform: translateX(-59px);
   margin-left: 70px;
 }
-body .menu .commander {
+.menu .commander {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .menu .commander button {
+.menu .commander button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -853,11 +846,11 @@ body .menu .commander button {
   height: 50px;
   padding: 0px 0px 0px 0px;
 }
-body .menu .commander button:hover::after {
+.menu .commander button:hover::after {
   opacity: 1;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
-body .menu .commander button::after {
+.menu .commander button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -871,78 +864,4 @@ body .menu .commander button::after {
   transition: opacity 250ms;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  background: #353535;
-  height: 186px;
-}
-@media (min-width: 768px) {
-  footer {
-    flex-direction: row-reverse;
-    height: 114px;
-  }
-}
-footer h2 {
-  font-family: "Shrikhand";
-  font-style: italic;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-  padding: 22px 0px 19px 25px;
-  color: white;
-}
-@media (min-width: 768px) {
-  footer h2 {
-    padding: 0px 4.51% 0px 6.1%;
-    align-content: end;
-    padding-bottom: 30px;
-  }
-}
-@media (min-width: 1280px) {
-  footer h2 {
-    padding: 0px 4.7% 30px 6.3%;
-  }
-}
-footer .footer__links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 0px 22px 25px;
-  gap: 7px;
-}
-@media (min-width: 768px) {
-  footer .footer__links {
-    flex-direction: row;
-    align-items: end;
-    padding: 0px 0px 30px 25px;
-    width: 100%;
-    justify-content: flex-end;
-  }
-}
-footer .footer__links a {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  gap: 10px;
-}
-footer .footer__links a p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-}
-footer .footer__links a .p--thin {
-  font-weight: 400;
-}
-@media (min-width: 768px) {
-  footer .footer__links .a--padding-left {
-    padding-left: 3%;
-  }
-}
-@media (min-width: 1280px) {
-  footer .footer__links .a--padding-left {
-    padding-left: 3.2%;
-  }
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=style.css.map */
