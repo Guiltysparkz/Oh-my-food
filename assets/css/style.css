@@ -67,12 +67,12 @@ header .location p {
 .loading {
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   height: 100%;
   width: 100%;
-  margin-top: -30%;
-  padding-top: 50%;
+  top: 0%;
+  padding-top: 20%;
   z-index: 3;
   background-color: white;
   animation-name: loading;
@@ -125,6 +125,7 @@ header .location p {
   justify-content: center;
   align-items: center;
   background: #F6F6F6;
+  padding: 0px 8% 0px 8%;
 }
 .reservation h2 {
   font-size: 24px;
@@ -222,13 +223,16 @@ header .location p {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  padding: 48px 0px 26px 20px;
+  text-align: center;
+  padding: 48px 170px 26px 26px;
   margin: 0px 0px 0px 0px;
 }
 @media (min-width: 768px) {
   .fonctionnement h2 {
     padding-left: 0px;
+    padding-right: 0px;
     margin-left: 4%;
+    text-align: unset;
   }
 }
 @media (min-width: 1280px) {
@@ -258,7 +262,7 @@ header .location p {
     margin-right: 0px;
   }
 }
-.fonctionnement button {
+.fonctionnement .button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -274,11 +278,11 @@ header .location p {
   max-width: 335px;
 }
 @media (min-width: 768px) {
-  .fonctionnement button {
+  .fonctionnement .button {
     width: 31.81%;
   }
 }
-.fonctionnement button .ordre {
+.fonctionnement .button .ordre {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,14 +296,14 @@ header .location p {
   line-height: 17px;
   border-radius: 100%;
 }
-.fonctionnement button i {
+.fonctionnement .button i {
   color: grey;
   padding-left: 28px;
 }
-.fonctionnement button .i--purple {
+.fonctionnement .button .i--purple {
   color: #9356DC;
 }
-.fonctionnement button h3 {
+.fonctionnement .button h3 {
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -379,6 +383,12 @@ header .location p {
     column-gap: 100px;
   }
 }
+@media (min-width: 1445px) {
+  .restaurants .restaurants__cards {
+    row-gap: 50px;
+    column-gap: 100px;
+  }
+}
 .restaurants .restaurants__cards a {
   display: flex;
   height: 251px;
@@ -398,6 +408,11 @@ header .location p {
 @media (min-width: 1440px) {
   .restaurants .restaurants__cards a {
     max-width: 490px;
+  }
+}
+@media (min-width: 1450px) {
+  .restaurants .restaurants__cards a {
+    max-width: 45%;
   }
 }
 .restaurants .restaurants__cards a .card {
@@ -739,7 +754,7 @@ footer .footer__links a .p--thin {
   flex-direction: column;
   gap: 12px;
 }
-.menu .menu-content__buttons button {
+.menu .menu-content__buttons .restaurant-button {
   display: flex;
   flex-direction: row;
   min-width: 349px;
@@ -754,7 +769,7 @@ footer .footer__links a .p--thin {
   position: relative;
   overflow: hidden;
 }
-.menu .menu-content__buttons button .buttons-text {
+.menu .menu-content__buttons .restaurant-button .buttons-text {
   display: flex;
   flex-direction: column;
   padding-left: 15px;
@@ -766,7 +781,7 @@ footer .footer__links a .p--thin {
   white-space: nowrap;
   flex-basis: 100%;
 }
-.menu .menu-content__buttons button .buttons-text h4 {
+.menu .menu-content__buttons .restaurant-button .buttons-text h4 {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
@@ -774,7 +789,7 @@ footer .footer__links a .p--thin {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu .menu-content__buttons button .buttons-text p {
+.menu .menu-content__buttons .restaurant-button .buttons-text p {
   font-weight: 300;
   font-size: 15.0431px;
   line-height: 18px;
@@ -783,21 +798,21 @@ footer .footer__links a .p--thin {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu .menu-content__buttons button .buttons-price {
+.menu .menu-content__buttons .restaurant-button .buttons-price {
   position: relative;
   padding-right: 13.5px;
   padding-bottom: 13.5px;
   transform: translateX(0%);
   transition: 0.3s ease-out;
 }
-.menu .menu-content__buttons button .buttons-price p {
+.menu .menu-content__buttons .restaurant-button .buttons-price p {
   display: flex;
   flex-direction: row;
   font-weight: 700;
   font-size: 15.0431px;
   line-height: 18px;
 }
-.menu .menu-content__buttons button .buttons-checkmark {
+.menu .menu-content__buttons .restaurant-button .buttons-checkmark {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -810,14 +825,14 @@ footer .footer__links a .p--thin {
   transition: 0.3s ease-out;
   right: 0%;
 }
-.menu .menu-content__buttons button .buttons-checkmark img {
+.menu .menu-content__buttons .restaurant-button .buttons-checkmark img {
   height: 20px;
   width: 20px;
 }
-.menu .menu-content__buttons button:hover > .buttons-checkmark {
+.menu .menu-content__buttons .restaurant-button:hover > .buttons-checkmark {
   transform: translateX(0%);
 }
-.menu .menu-content__buttons button:hover > .buttons-price {
+.menu .menu-content__buttons .restaurant-button:hover > .buttons-price {
   transform: translateX(-59px);
   margin-left: 70px;
 }

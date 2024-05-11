@@ -71,12 +71,12 @@ header {
 .loading {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     height: 100%;
     width: 100%;
-    margin-top: -30%;
-    padding-top: 50%;
+    top: 0%;
+    padding-top: 20%;
     z-index: 3;
     background-color: white;
     animation-name: loading;
@@ -114,6 +114,7 @@ header {
     justify-content: center;
     align-items: center;
     background: #F6F6F6;
+    padding: 0px 8% 0px 8%;
     h2 {
         font-size: 24px;
         font-weight: 700;
@@ -199,11 +200,14 @@ header {
         font-weight: 700;
         font-size: 24px;
         line-height: 28px;
-        padding: 48px 0px 26px 20px;
+        text-align: center;
+        padding: 48px 170px 26px 26px;
         margin: 0px 0px 0px 0px;
         @media (min-width: 768px) {
             padding-left: 0px;
+            padding-right: 0px;
             margin-left: 4%;
+            text-align: unset;
         }
         @media (min-width: 1280px) {
             padding-left: 0px;
@@ -227,7 +231,7 @@ header {
             margin-right: 0px;
         }
     }
-    button {
+    .button {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -328,6 +332,10 @@ header {
             row-gap: 50px;
             column-gap: 100px;
         }
+        @media (min-width: 1445px) {
+            row-gap: 50px;
+            column-gap: 100px;
+        }
         a {
             display: flex;
             height: 251px;
@@ -341,6 +349,9 @@ header {
             }
             @media (min-width: 1440px) {
                 max-width: 490px;
+            }
+            @media (min-width: 1450px) {
+                max-width: 45%;
             }
             .card {
                 display: flex;
